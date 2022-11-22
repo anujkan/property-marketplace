@@ -352,10 +352,6 @@ button {
 	@apply font-serif text-white text-center bg-black/50 rounded-b-lg p-1 text-xs font-normal h-6 -mt-6 relative;
 }
 
-.category {
-	margin-bottom: 10rem;
-}
-
 .categoryListings {
 	padding: 0;
 }
@@ -441,10 +437,6 @@ button {
 	border-radius: 1rem;
 	opacity: 0.7;
 	margin-top: 2rem;
-}
-
-.listingDetails {
-	margin-bottom: 10rem;
 }
 
 .shareIconDiv {
@@ -764,7 +756,7 @@ button {
 }
 
 .user-form-container {
-	@apply w-full absolute top-0 bottom-0 left-0 right-0 box-border overflow-y-auto py-6 mt-14 px-6;
+	@apply w-full absolute top-0 bottom-0 left-0 right-0 box-border overflow-y-auto py-6 mt-14 px-6 pb-28 sm:pb-6;
 }
 
 .user-form-container .form-wrapper {
