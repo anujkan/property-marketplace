@@ -113,6 +113,7 @@ const CreateListings = () => {
 					(snapshot) => {
 						// Observe state change events such as progress, pause, and resume
 						// Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+						// eslint-disable-next-line no-unused-vars
 						const progress =
 							(snapshot.bytesTransferred / snapshot.totalBytes) * 100;
 						// eslint-disable-next-line default-case
