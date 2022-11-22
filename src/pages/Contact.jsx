@@ -43,7 +43,7 @@ const Contact = () => {
 	}
 
 	return (
-		<div className="pageContainer">
+		<div className="page-wrapper">
 			<header>
 				<p className="pageHeader">Contact Owner</p>
 			</header>

@@ -104,12 +104,18 @@ const Profile = (props) => {
 	}
 
 	return (
-		<div className="profile">
+		<div className="page-wrapper">
 			<header className="profileHeader">
-				<p className="pageHeader">My Profile</p>
-				<button type="button" className="logOut" onClick={logoutHandler}>
-					Logout
-				</button>
+				<p className="pageHeader">
+					My Profile
+					<button
+						type="button"
+						className="logOut float-right"
+						onClick={logoutHandler}
+					>
+						Logout
+					</button>
+				</p>
 			</header>
 
 			<main>
@@ -122,7 +128,7 @@ const Profile = (props) => {
 							setEditDetails((prevState) => !prevState);
 						}}
 					>
-						{editDetails ? "done" : "change"}
+						{editDetails ? "Done" : "Edit"}
 					</p>
 				</div>
 				<div className="profileCard">

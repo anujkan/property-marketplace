@@ -34,12 +34,10 @@ const OAuth = () => {
 	};
 
 	return (
-		<div className="socialLogin">
-			<p>Sign {location.pathname === "/sign-up" ? "up" : "in"} with</p>
-			<button className="socialIconDiv" onClick={googleAuthHandler}>
-				<img className="socialIconImg" src={googleIcon} alt="Google" />
-			</button>
-		</div>
+		<button className="socialLogin" onClick={googleAuthHandler}>
+			<img className="socialIconImg" src={googleIcon} alt="Google" />
+			{location.pathname === "/sign-up" ? "Sign up" : "Log in"} with Google
+		</button>
 	);
 };
 

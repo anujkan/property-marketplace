@@ -15,11 +15,13 @@ import ForgotPassword from "./pages/ForgotPassword";
 import CreateListings from "./pages/CreateListings";
 import EditListing from "./pages/EditListing";
 import Contact from "./pages/Contact";
+import Header from "./components/Header";
 
 function App() {
 	return (
 		<>
 			<Router>
+				<Header />
 				<Routes>
 					<Route path="/" element={<Explore />} />
 					<Route path="/offers" element={<Offers />} />

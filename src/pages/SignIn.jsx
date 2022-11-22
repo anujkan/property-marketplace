@@ -7,6 +7,8 @@ import OAuth from "../components/OAuth";
 import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
 import visibilityIcon from "../assets/svg/visibilityIcon.svg";
 
+import formBgImage from "../assets/jpg/user-form-background.jpg";
+
 const SignIn = (props) => {
 	const [showPassword, setShowPassword] = useState(false);
 	const [formData, setFormData] = useState({
@@ -45,60 +47,75 @@ const SignIn = (props) => {
 	};
 
 	return (
-		<>
-			<div className="pageContainer">
-				<header>
-					<p className="pageHeader">Welcome Back!</p>
-				</header>
+		<div className="user-form-container">
+			<div className="form-wrapper">
+				<div className="user-form">
+					<header>
+						<h2 className="pageHeader">Welcome Back!</h2>
+						<p className="-mt-3 mb-8 font-medium">Please Login</p>
+					</header>
 
-				<main>
-					<form onSubmit={onSubmitHandler}>
-						<input
-							type="email"
-							className="emailInput"
-							placeholder="Email"
-							id="email"
-							value={email}
-							onChange={onChange}
-							autoComplete="username"
-						/>
-						<div className="passwordInputDiv">
+					<main>
+						<form onSubmit={onSubmitHandler}>
 							<input
-								type={showPassword ? "text" : "password"}
-								className="passwordInput"
-								id="password"
-								placeholder="Password"
-								value={password}
+								type="email"
+								className="user-form-input user-email-input"
+								placeholder="Email"
+								id="email"
+								value={email}
 								onChange={onChange}
-								autoComplete="current-password"
+								autoComplete="username"
 							/>
-							<img
-								src={visibilityIcon}
-								alt="show password"
-								className="showPassword"
-								onClick={handleVisibilityIconClick}
-							/>
+							<div className="passwordInputDiv">
+								<input
+									type={showPassword ? "text" : "password"}
+									className="user-form-input user-password-input"
+									id="password"
+									placeholder="Password"
+									value={password}
+									onChange={onChange}
+									autoComplete="current-password"
+								/>
+								<img
+									src={visibilityIcon}
+									alt="show password"
+									className="showPassword"
+									onClick={handleVisibilityIconClick}
+								/>
+							</div>
+							<Link to="/forgot-password" className="forgotPasswordLink">
+								Forgot Password
+							</Link>
+
+							<div className="signInBar">
+								<button className="signInButton">
+									<p className="signInText">Log In</p>
+									<ArrowRightIcon fill="#ffffff" width="24px" height="24px" />
+								</button>
+							</div>
+						</form>
+
+						<div className="border-b relative border-slate-200 h-0 my-8 text-center flex justify-center">
+							<span className="absolute -top-2 w-auto bg-white px-3 font-bold text-sm">
+								OR
+							</span>
 						</div>
-						<Link to="/forgot-password" className="forgotPasswordLink">
-							Forgot Password
-						</Link>
 
-						<div className="signInBar">
-							<p className="signInText">Sign In</p>
-							<button className="signInButton">
-								<ArrowRightIcon fill="#ffffff" width="34px" height="34px" />
-							</button>
+						<OAuth />
+
+						<div className="switch-form">
+							<p>Do not have an account yet?</p>
+							<Link to="/sign-up" className="registerLink">
+								Create One
+							</Link>
 						</div>
-					</form>
-
-					<OAuth />
-
-					<Link to="/sign-up" className="registerLink">
-						Sign-up Instead
-					</Link>
-				</main>
+					</main>
+				</div>
+				<div className="bg-container">
+					<img src={formBgImage} alt="Property Marketplace" />
+				</div>
 			</div>
-		</>
+		</div>
 	);
 };
 

@@ -1,0 +1,32 @@
+.pageHeader {
+	@apply fixed flex flex-row justify-between items-center justify-items-center shadow-lg top-0 w-full h-14 z-10 bg-white shadow-slate-300;
+
+	.logo {
+		@apply flex flex-row h-full items-center cursor-pointer;
+		img {
+			@apply w-10 h-10 ml-4;
+		}
+
+		h4 {
+			@apply ml-2 text-sm font-semibold text-slate-500;
+		}
+	}
+
+	.page-navigation {
+		@apply hidden sm:block pr-6;
+
+		nav {
+			ul {
+				@apply flex flex-row gap-6;
+
+				li {
+					@apply flex flex-row items-center cursor-pointer;
+
+					.link-text {
+						@apply text-sm font-semibold underline underline-offset-[12px] decoration-4 transition-all duration-1000;
+					}
+				}
+			}
+		}
+	}
+}
