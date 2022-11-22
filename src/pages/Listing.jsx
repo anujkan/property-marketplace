@@ -115,7 +115,6 @@ const Listing = () => {
 								: "1 Bedroom"}
 						</li>
 					)}
-					{console.log(listing)}
 					{listing.bathrooms && (
 						<li className="flex flex-row items-center">
 							<img
