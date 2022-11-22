@@ -50,12 +50,12 @@ const Contact = () => {
 			{owner !== null && (
 				<main>
 					<div className="contactLandlord">
-						<p className="landlordName">Contact {owner?.name}</p>
+						<p className="landlordName">Owner name: {owner?.name}</p>
 					</div>
 					<form className="messageForm">
 						<div className="messageDiv">
 							<label htmlFor="message" className="messageLabel">
-								Message
+								Type Message
 							</label>
 							<textarea
 								name="message"
@@ -69,8 +69,8 @@ const Contact = () => {
 									"listingName"
 								)}&body=${message}`}
 							>
-								<button type="button" className="primaryButton">
-									Send Message
+								<button type="button" className="primaryButton min-w-full">
+									Email Message
 								</button>
 							</a>
 						</div>
