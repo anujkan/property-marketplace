@@ -95,7 +95,7 @@ const Offers = () => {
 	};
 
 	return (
-		<div className="category">
+		<div className="page-wrapper">
 			<header>
 				<p className="pageHeader">Offers</p>
 			</header>

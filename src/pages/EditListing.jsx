@@ -237,7 +237,7 @@ const EditListings = () => {
 	}
 
 	return (
-		<div className="profile">
+		<div className="page-wrapper">
 			<header>
 				<p className="pageHeader">Edit Listing</p>
 			</header>

@@ -5,7 +5,7 @@ import Slider from "../components/Slider";
 
 const Explore = (props) => {
 	return (
-		<div className="explore">
+		<div className="page-wrapper">
 			<header>
 				<p className="pageHeader">Explore</p>
 			</header>

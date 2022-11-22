@@ -197,7 +197,7 @@ const CreateListings = () => {
 	}
 
 	return (
-		<div className="profile">
+		<div className="page-wrapper">
 			<header>
 				<p className="pageHeader">Create a Listing</p>
 			</header>
@@ -328,30 +328,26 @@ const CreateListings = () => {
 					/>
 
 					{!geolocationEnabled && (
-						<div className="formLatLng flex">
-							<div>
-								<label className="formLabel">Latitude</label>
-								<input
-									className="formInputSmall"
-									type="number"
-									id="latitude"
-									value={latitude}
-									onChange={onMutate}
-									required
-								/>
-							</div>
-							<div>
-								<label className="formLabel">Longitude</label>
-								<input
-									className="formInputSmall"
-									type="number"
-									id="longitude"
-									value={longitude}
-									onChange={onMutate}
-									required
-								/>
-							</div>
-						</div>
+						<>
+							<label className="formLabel">Latitude</label>
+							<input
+								className="formInputSmall formInputLatLong"
+								type="number"
+								id="latitude"
+								value={latitude}
+								onChange={onMutate}
+								required
+							/>
+							<label className="formLabel">Longitude</label>
+							<input
+								className="formInputSmall formInputLatLong"
+								type="number"
+								id="longitude"
+								value={longitude}
+								onChange={onMutate}
+								required
+							/>
+						</>
 					)}
 
 					<label className="formLabel">Offer</label>

@@ -32,13 +32,12 @@ export const Category = () => {
 				const q = query(
 					listingRef,
 					where("type", "==", params.categoryName),
-					orderBy("timestamp", "desc"),
-					limit(5)
+					orderBy("timestamp", "desc")
 				);
 
 				//  Execute Query
 				const querySnap = await getDocs(q);
-
+				console.log(querySnap.docs.length);
 				const lastVisible = querySnap.docs[querySnap.docs.length - 1];
 				setLastFetchedListing(lastVisible);
 
@@ -97,7 +96,7 @@ export const Category = () => {
 	};
 
 	return (
-		<div className="category">
+		<div className="category page-wrapper">
 			<header>
 				<p className="pageHeader">
 					{params.categoryName === "rent"

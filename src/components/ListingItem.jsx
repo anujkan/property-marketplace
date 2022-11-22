@@ -28,13 +28,13 @@ export const ListingItem = ({ listing, id, onDelete, onEdit }) => {
 						{listing.type === "rent" && " / Month"}
 					</p>
 					<div className="categoryListingInfoDiv">
-						<img src={bedIcon} alt="Bedrooms" />
+						<img src={bedIcon} alt="Bedrooms" className="w-5" />
 						<p className="categoryListingInfoText">
 							{listing.bedrooms > 1
 								? `${listing.bedrooms} Bedrooms`
 								: "1 Bedroom"}
 						</p>
-						<img src={bathtubIcon} alt="Bathrooms" />
+						<img src={bathtubIcon} alt="Bathrooms" className="w-5" />
 						<p className="categoryListingInfoText">
 							{listing.bathrooms > 1
 								? `${listing.bathrooms} Bathrooms`
